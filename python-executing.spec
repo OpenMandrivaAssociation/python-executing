@@ -2,8 +2,8 @@
 %bcond_without test
 
 Name:		python-executing
-Version:	2.2.0
-Release:	2
+Version:	2.2.1
+Release:	1
 Summary:	Get the currently executing AST node of a frame, and other information
 URL:		https://pypi.org/project/executing/
 License:	MIT
