@@ -1,8 +1,9 @@
 %define module executing
-%bcond_without test
+# Tests need ipython, which is still Python 3.14.
+%bcond_with test
 
 Name:		python-executing
-Version:	2.2.1
+Version:	2.3.0
 Release:	1
 Summary:	Get the currently executing AST node of a frame, and other information
 URL:		https://pypi.org/project/executing/
@@ -34,6 +35,8 @@ particularly the AST node being executed.
 %autosetup -p1 -n %{module}-%{version}
 
 %build
+# The sdist has no git tag for setuptools_scm.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %py_build
 
 %install
